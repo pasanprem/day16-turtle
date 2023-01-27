@@ -40,6 +40,35 @@
 # ----------------------
 ## RANDOM WALK ##
 
+# from turtle import Turtle, Screen
+# import random
+
+# t = Turtle()
+#
+# screen = Screen()
+# screen.colormode(255)
+#
+# distance = 1000
+# direction = [0, 90, 180, 270]
+# t.width(10)
+# t.hideturtle()
+# t.speed(0)
+#
+# for i in range (1, distance):
+#     r = random.randint(0, 255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#
+#     t.pencolor(r, g, b)
+#
+#     t.forward(20)
+#     t.setheading(random.choice(direction))
+#
+#
+#
+#
+# screen.exitonclick()
+# ------------------------------------
 from turtle import Turtle, Screen
 import random
 
@@ -48,21 +77,29 @@ t = Turtle()
 screen = Screen()
 screen.colormode(255)
 
-distance = 100
-direction = [0, 90, 180, 270]
-t.width(10)
+radius = 100
+t.hideturtle()
+t.speed(0)
 
-for i in range (1, distance):
+def t_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
+    ran_color = (r, g, b)
+    return ran_color
 
-    t.pencolor(r, g, b)
-
-    t.forward(20)
-    t.setheading(random.choice(direction))
+for i in range (0, 72):
+    t.pencolor(t_color())
+    t.circle(radius)
+    t.left(5)
 
 
 
 
 screen.exitonclick()
+
+
+
+
+
+
