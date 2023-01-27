@@ -78,7 +78,7 @@ screen = Screen()
 screen.colormode(255)
 
 radius = 100
-t.hideturtle()
+# t.hideturtle()
 t.speed(0)
 
 def t_color():
